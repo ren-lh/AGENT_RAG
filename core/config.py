@@ -31,8 +31,14 @@ class Settings(BaseSettings):
     # 默认返回结果数量
     top_k: int = 5
 
-    # 向量维度
-    vector_size: int = 1536
+    # =====通义（DashScope）向量化模型=====
+    # API Key，从阿里云百炼控制台获取；留空则向量化功能不可用
+    dashscope_api_key: str = ""
+    # 向量化模型名。注意：模型实际输出的维度必须和下面的 vector_size 一致
+    tongyi_embedding_model: str = "text-embedding-v4"
+
+    # 向量维度（必须和上面模型实际输出的维度一致，否则写入 Milvus 会报维度错误）
+    vector_size: int = 1024
 
     # =====文档分块参数=====
     # 每个 chunk最大字符数

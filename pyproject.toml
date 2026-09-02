@@ -4,9 +4,12 @@ version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
     "aiomysql>=0.3.2",
+    "chardet>=7.6.0",
     "cryptography>=50.0.1",
+    "dashscope>=1.27.3",
     "fastapi>=0.141.1",
     "langchain-core>=1.6.1",
+    "langchain-text-splitters>=1.1.2",
     "pydantic-settings>=2.15.0",
     "pymilvus[milvus-lite]>=3.0.1",
     "python-multipart>=0.0.32",
